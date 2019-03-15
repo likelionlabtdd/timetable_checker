@@ -1,0 +1,63 @@
+{% extends "base.html"%}
+{% block contents %}
+
+<div class="jumbotron">
+    <h1 class="display-4 text-center font-weight-bold">모두의 공강</h1>
+    <p class="lead text-center">유저 ID를 ","로 구분하여 적어주세요</p>
+    <hr class="my-4">
+    <form class="text-center" action="/" method=POST>
+        {% csrf_token %}
+        <div class="input-group mb-3 container">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">유저ID</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="idList" placeholder="user01, user02, . . .">
+        </div>
+        <br>
+        <button class="btn btn-outline-danger mt-3 px-5 py-2 btn-lg" type="submit">공강 찾기</button>
+    </form>
+</div>
+
+<br>
+<div class="timetable mb-5">
+    <table class="timebody">
+        <thead>
+            <th>&nbsp&nbsp시간&nbsp&nbsp</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <div class="times">
+                    {% for time in hour %}
+                        <div class="blank timeb">{{ time }}</div>
+                    {% endfor %}
+                </div>
+            </td>
+            
+            {% for day, freetimes in days %}
+                    <td>
+                        <div class="oneday">
+                            <div class="blanks">
+                                {% for time in hour %}
+                                    <div class="blank">&nbsp&nbsp&nbsp&nbsp</div>
+                                {% endfor %}
+                            </div>
+                            {% for free in freetimes %}
+                            <div class="free" style="top: {{ free.0 }}px; height: {{ free.1 }}px">
+                                <h5>빈시간</h5>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

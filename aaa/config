@@ -1,0 +1,23 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = git@github.com:youngerous/Everytime_Timetable_Checker.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = codecommit-origin
+	merge = refs/heads/master
+[credential]
+	UseHttpPath = true
+	helper = !aws codecommit credential-helper $@
+[remote "codecommit-origin"]
+	url = https://git-codecommit.ap-northeast-2.amazonaws.com/v1/repos/origin
+	fetch = +refs/heads/*:refs/remotes/codecommit-origin/*
+	pushurl = https://git-codecommit.ap-northeast-2.amazonaws.com/v1/repos/origin
+[remote "heroku"]
+	url = https://git.heroku.com/timetable-checker.git
+	fetch = +refs/heads/*:refs/remotes/heroku/*

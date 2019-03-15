@@ -1,0 +1,243 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "AirPods",
+    "url": "https://www.apple.com/kr/shop/product/MMEF2KH/A/airpods",
+    "mainEntityOfPage": "https://www.apple.com/kr/shop/product/MMEF2KH/A/airpods",
+    "brand": {
+        "@type": "Organization",
+        "name": "Apple"
+    },
+    "offers": [
+        {
+            "@type": "Offer",
+            "priceCurrency": "KRW",
+            "price": 219000,
+            "sku": "MMEF2KH/A"
+        }
+    ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "bestRating": "5",
+        "reviewCount": "62"
+    },
+    "image": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/image/AppleInc/aos/published/images/M/ME/MMEF2/MMEF2?wid=2000&hei=2000&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1503962928226",
+    "isAccessoryOrSparePartFor": [
+        {
+            "@type": "Product",
+            "name": "iPad Air"
+        },
+        {
+            "@type": "Product",
+            "name": "Apple TV (4세대)"
+        },
+        {
+            "@type": "Product",
+            "name": "Apple TV 4K"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone X"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone SE"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone 7 Plus"
+        },
+        {
+            "@type": "Product",
+            "name": "Mac mini - Thunderbolt 3(USB-C)"
+        },
+        {
+            "@type": "Product",
+            "name": "13형 MacBook Pro"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone 6s"
+        },
+        {
+            "@type": "Product",
+            "name": "iPad Pro 12.9형(1세대)"
+        },
+        {
+            "@type": "Product",
+            "name": "iPad Pro 12.9형 (2세대)"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone 6s Plus"
+        },
+        {
+            "@type": "Product",
+            "name": "21.5형 iMac - Thunderbolt 2"
+        },
+        {
+            "@type": "Product",
+            "name": "Series 2",
+            "url": "https://www.apple.com/kr/watch"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone 5"
+        },
+        {
+            "@type": "Product",
+            "name": "Mac Pro"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone 5c"
+        },
+        {
+            "@type": "Product",
+            "name": "iPad Pro 10.5형"
+        },
+        {
+            "@type": "Product",
+            "name": "11형 MacBook Air"
+        },
+        {
+            "@type": "Product",
+            "name": "27형 iMac - Thunderbolt 2"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone XS Max"
+        },
+        {
+            "@type": "Product",
+            "name": "iPad Pro 9.7형"
+        },
+        {
+            "@type": "Product",
+            "name": "iPod touch 6세대"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone 8"
+        },
+        {
+            "@type": "Product",
+            "name": "11형 iPad Pro"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone 8 Plus"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone 7"
+        },
+        {
+            "@type": "Product",
+            "name": "15형 MacBook Pro"
+        },
+        {
+            "@type": "Product",
+            "name": "Series 3",
+            "url": "https://www.apple.com/kr/watch"
+        },
+        {
+            "@type": "Product",
+            "name": "iPad(6세대)"
+        },
+        {
+            "@type": "Product",
+            "name": "1세대",
+            "url": "https://www.apple.com/kr/watch"
+        },
+        {
+            "@type": "Product",
+            "name": "Series 4",
+            "url": "https://www.apple.com/kr/watch"
+        },
+        {
+            "@type": "Product",
+            "name": "12형 MacBook"
+        },
+        {
+            "@type": "Product",
+            "name": "27형 iMac - Thunderbolt 3(USB-C)"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone 6 Plus"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone 6"
+        },
+        {
+            "@type": "Product",
+            "name": "iPad mini 2"
+        },
+        {
+            "@type": "Product",
+            "name": "21.5형 iMac - Thunderbolt 3(USB-C)"
+        },
+        {
+            "@type": "Product",
+            "name": "13형 MacBook Pro - Thunderbolt 3(USB-C)"
+        },
+        {
+            "@type": "Product",
+            "name": "iPad(5세대)"
+        },
+        {
+            "@type": "Product",
+            "name": "13형 MacBook Air"
+        },
+        {
+            "@type": "Product",
+            "name": "12.9형 iPad Pro(3세대)"
+        },
+        {
+            "@type": "Product",
+            "name": "13형 MacBook Air Retina 디스플레이"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone 5s"
+        },
+        {
+            "@type": "Product",
+            "name": "iPad mini 3"
+        },
+        {
+            "@type": "Product",
+            "name": "Mac mini"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone XS",
+            "url": "https://www.apple.com/kr/shop/buy-iphone/iphone-xs"
+        },
+        {
+            "@type": "Product",
+            "name": "Series 1",
+            "url": "https://www.apple.com/kr/watch"
+        },
+        {
+            "@type": "Product",
+            "name": "iPad mini 4"
+        },
+        {
+            "@type": "Product",
+            "name": "iPad Air 2"
+        },
+        {
+            "@type": "Product",
+            "name": "iPhone XR"
+        },
+        {
+            "@type": "Product",
+            "name": "15형 MacBook Pro - Thunderbolt 3(USB-C)"
+        }
+    ],
+    "description": "AirPods은 무선으로 볼륨을 조절하고, 음악 및 동영상을 재생하고, 전화를 받을 수 있게 해줍니다. 지금 apple.com에서 AirPods을 구입하세요."
+}

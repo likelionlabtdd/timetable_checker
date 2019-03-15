@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        th {
+            text-align: center;
+        }
+        td {
+            padding: 0;
+            border: 1px solid #e3e3e3;
+            text-align: center;
+            vertical-align: center;
+        }
+        .timetable {
+            margin: auto;
+        }
+
+        .oneday {
+            position: relative;
+        }
+        .blank {
+            width: 150px;
+            height: 60px;
+            border-bottom: 1px solid #e3e3e3;
+        }
+        .timeb {
+            width: 50px !important;
+            line-height: 60px;
+        }
+        .free {
+            position: absolute;
+            width: 150px;
+            line-height: 60px;
+            background-color: rgba(216, 253, 3, 0.74);
+        }
+        .nav-logo{
+            border: 1px solid white;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        .free{
+            position: absolute;
+        }
+
+        .jumbotron{
+            background-color: #c6281731 !important;
+        }
+
+        .input-group-text{
+            background-color: #c62817 !important;
+            color: white;
+            width: 100px;
+            display: inline;
+        }
+    </style>
+    <title>모두의 공강 </title>
+
+    {% load staticfiles %}
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">  
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #c62917; opacity: 0.9">
+            <a class="nav-logo navbar-brand font-weight-bold" href="{% url 'home' %}">모두의 공강</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"> 
+
+                {% if user.is_authenticated %}
+                
+                    <li class="nav-item">
+                        <a class="nav-link disabled font-weight-bold" href="#" tabindex="-1" aria-disabled="true">환영합니다, {{ user.username }}님!</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'update'%}">URL수정</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+                        <form id="logout" method="POST" action="{% url 'logout' %}">
+                            {% csrf_token %} <input type="hidden" />
+                        </form>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'signup'%}">회원가입</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login'%}">로그인</a>
+                    </li>
+                {% endif %}    
+
+            </ul>
+            
+            </div>
+        </nav>
+
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == 'success' %}
+                    <div class="p-3 mt-2 mb-2 border border-success text-success rounded">{{ message }} </div>
+                {% else %}
+                    <div class="p-3 mt-2 mb-2 border border-danger text-danger rounded ">{{ message }} </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {% block contents %}
+        {% endblock %}
+    </div>
+
+    <footer class="">
+        <div class="container fixed-bottom font-italic footer-copyright  py-2" style="background-color: #c6281731">
+            <div class="text-right">©2019 모두의공강: 멋사 TDD스터디 조상연 김탁영 박성우</div> 
+        </div>
+    </footer>
+</body>
+</html>

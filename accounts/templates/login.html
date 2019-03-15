@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<div class="jumbotron">
+        <h1 class="display-4 text-center font-weight-bold">Member Login</h1>
+        <br>
+        <hr class="my-4">
+ 
+        <form method="POST" action="{% url 'login' %}" class="m-3">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">ID</span>
+                </div>
+                <input type="text" class="form-control" placeholder="아이디" aria-label="Username" aria-describedby="basic-addon1" name="username" value="" required>
+            </div>
+    
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">PW</span>
+                </div>
+                <input type="password" class="form-control" placeholder="비밀번호" aria-label="Password" aria-describedby="basic-addon1" name="password" value="" required>
+            </div>
+    
+            <input type="submit" class="float-right btn btn-outline-danger btn-lg" type="submit" value="로그인"> 
+        </form>
+ 
+    </div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<div class="jumbotron">
+        <h1 class="display-4 text-center font-weight-bold">URL수정</h1>
+        <br>
+        <hr class="my-4">
+ 
+        <form method="POST" action="{% url 'update' %}" class="m-3">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">ID</span>
+                </div>
+                <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" name="username" value="{{ user.username }}" disabled>
+            </div>
+    
+            <!-- <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">PW</span>
+                </div>
+                <input type="password" class="form-control" placeholder="비밀번호" aria-label="Password" aria-describedby="basic-addon1" name="password" value="" required>
+            </div> -->
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">URL</span>
+                </div>
+                <input type="url" required id="timetable_url" class="form-control" pattern="https://everytime\..*" title="에브리타임 주소를 입력해주세요"  aria-label="Timetable_url" aria-describedby="basic-addon1" name="timetable_url" 
+                placeholder="https://everytime.kr/@"
+                value="" required>
+            </div>
+    
+            <input type="submit" class="float-right btn btn-outline-danger btn-lg" type="submit" value="수정하기"> 
+        </form>
+ 
+    </div>
+
+    <div class="container">
+        <h5>URL 찾는 법</h5>
+        <p>
+            1. 모바일 에브리타임에 접속합니다. <br>
+            2. 우측 상단의 '설정'(톱니바퀴) 버튼을 클릭합니다. <br>
+            3. URL 공유 버튼을 누르면 클립보드에 복사됩니다. <br>
+        </p>
+    </div>
+
+{% endblock %}
